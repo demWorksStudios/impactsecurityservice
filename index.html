@@ -3,488 +3,2691 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impact Security Service</title>
+    <title>Impact Security Service | Professional Guarding & Protection Solutions</title>
+    <meta name="description" content="Impact Security Service provides premier in-person security personnel, 24/7 corporate guarding, industrial asset protection, residential patrols, and event security in Howrah, Kolkata, and West Bengal. GST Verified & PSARA Compliant.">
+    <meta name="keywords" content="security agency Howrah, security guard service Kolkata, industrial security Liluah, corporate security guards, event security bouncers, armed security guards West Bengal, Impact Security Service">
+    <meta name="author" content="Impact Security Service">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a0e17">
+
+    <!-- Open Graph / Social Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Impact Security Service | Professional Protection You Can Trust">
+    <meta property="og:description" content="Disciplined, police-verified security personnel and 24/7 guarding solutions for corporate, industrial, residential, and event requirements.">
+    <meta property="og:url" content="https://impactsecurityservice.com">
+
+    <!-- Schema.org JSON-LD Structured Data for Local Business & Security Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SecurityService",
+      "name": "Impact Security Service",
+      "image": "https://images.unsplash.com/photo-1541888081622-6b933390382d?auto=format&fit=crop&q=80",
+      "telephone": "+919123991420",
+      "email": "impactsecurityservice@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "77/11 Mirpara Road, Liluah",
+        "addressLocality": "Howrah",
+        "addressRegion": "West Bengal",
+        "postalCode": "711204",
+        "addressCountry": "IN"
+      },
+      "taxID": "19DUMPA9757H1ZO",
+      "priceRange": "$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    }
+    </script>
+
+    <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --primary-red: #cc0000;
-            --dark-gray: #1a1a1a;
-            --light-gray: #f4f4f4;
-            --white: #ffffff;
-            --transition-speed: 0.3s;
-            --snappy-curve: cubic-bezier(0.25, 0.8, 0.25, 1);
+            /* Core Palette */
+            --bg-base: #080b11;
+            --bg-elevated: #0f1523;
+            --bg-surface: #151c2e;
+            --bg-surface-hover: #1c263d;
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-highlight: rgba(225, 29, 72, 0.35);
+
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --text-inverted: #080b11;
+
+            /* Brand Accents */
+            --crimson: #e11d48;
+            --crimson-dark: #be123c;
+            --crimson-light: #fb7185;
+            --crimson-glow: rgba(225, 29, 72, 0.22);
+            --crimson-glow-strong: rgba(225, 29, 72, 0.45);
+
+            --amber: #f59e0b;
+            --emerald: #10b981;
+            --blue-steel: #38bdf8;
+
+            /* Typography */
+            --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+            --font-heading: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+
+            /* Spacing & Radii */
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+            --radius-pill: 9999px;
+
+            /* Shadows & Glassmorphism */
+            --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.3);
+            --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+            --shadow-glow: 0 0 25px var(--crimson-glow);
+            --shadow-glow-hover: 0 0 35px var(--crimson-glow-strong);
+
+            /* Transitions */
+            --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            --transition-bounce: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
-        * {
+        /* CSS Reset & Global */
+        *, *::before, *::after {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
         html {
-            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+            color-scheme: dark;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--dark-gray);
-            background-color: var(--white);
+            font-family: var(--font-body);
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            line-height: 1.65;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
-        /* --- Animations --- */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* Subtle background ambient mesh */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: 
+                radial-gradient(circle at 15% 20%, rgba(225, 29, 72, 0.07) 0%, transparent 40%),
+                radial-gradient(circle at 85% 75%, rgba(56, 189, 248, 0.04) 0%, transparent 45%);
+            pointer-events: none;
+            z-index: -1;
         }
 
-        @keyframes pulseGlow {
-            0% { box-shadow: 0 0 0 0 rgba(204, 0, 0, 0.4); }
-            70% { box-shadow: 0 0 0 10px rgba(204, 0, 0, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(204, 0, 0, 0); }
+        /* Typography Presets */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            color: var(--text-primary);
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
         }
 
-        /* Classes for JavaScript Scroll Observer */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s var(--snappy-curve);
+        p {
+            color: var(--text-secondary);
+            font-size: 1.025rem;
+            line-height: 1.7;
         }
 
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition-smooth);
         }
 
-        /* --- Header & Navigation --- */
-        header {
-            background-color: rgba(26, 26, 26, 0.95);
-            backdrop-filter: blur(10px);
-            color: var(--white);
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* --- Global Badges & Utility Components --- */
+        .badge {
+            display: inline-flex;
             align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            border-radius: var(--radius-pill);
+            font-size: 0.825rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            background: rgba(225, 29, 72, 0.12);
+            color: var(--crimson-light);
+            border: 1px solid rgba(225, 29, 72, 0.3);
+            box-shadow: 0 0 15px rgba(225, 29, 72, 0.1);
+        }
+
+        .badge-verified {
+            background: rgba(16, 185, 129, 0.12);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .badge-amber {
+            background: rgba(245, 158, 11, 0.12);
+            color: #fbbf24;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .badge-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: currentColor;
+            display: inline-block;
+            animation: blink 1.8s infinite ease-in-out;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.3; transform: scale(0.7); }
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 13px 26px;
+            border-radius: var(--radius-md);
+            font-family: var(--font-heading);
+            font-size: 0.975rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--crimson) 0%, var(--crimson-dark) 100%);
+            color: #ffffff;
+            box-shadow: 0 4px 18px var(--crimson-glow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px var(--crimson-glow-strong);
+            background: linear-gradient(135deg, #f43f5e 0%, var(--crimson) 100%);
+            color: #ffffff;
+        }
+
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--text-primary);
+            border: 1px solid var(--border-subtle);
+            backdrop-filter: blur(8px);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.25);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background: #128c7e;
+            color: #ffffff;
+        }
+
+        .btn-whatsapp:hover {
+            background: #25d366;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-sm {
+            padding: 9px 18px;
+            font-size: 0.875rem;
+            border-radius: var(--radius-sm);
+        }
+
+        .btn-lg {
+            padding: 16px 32px;
+            font-size: 1.05rem;
+            border-radius: var(--radius-md);
+        }
+
+        /* --- Navigation Bar --- */
+        .header-wrap {
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-            transition: padding var(--transition-speed) ease;
+            width: 100%;
+            background: rgba(8, 11, 17, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-subtle);
+            transition: var(--transition-smooth);
         }
 
-        /* Add a class via JS when scrolling down to shrink header */
-        header.scrolled {
-            padding: 0.5rem 5%;
+        .header-wrap.scrolled {
+            background: rgba(8, 11, 17, 0.95);
+            border-bottom: 1px solid rgba(225, 29, 72, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
         }
 
-        .logo-container {
+        .nav-container {
             display: flex;
             align-items: center;
-            gap: 10px;
-            transition: transform var(--transition-speed) var(--snappy-curve);
+            justify-content: space-between;
+            height: 80px;
+            transition: var(--transition-smooth);
         }
 
-        .logo-container:hover {
-            transform: scale(1.05);
+        .header-wrap.scrolled .nav-container {
+            height: 70px;
         }
 
-        .logo-text {
-            font-size: 1.5rem;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        .logo-highlight {
-            color: var(--primary-red);
-        }
-
-        .contact-cta {
-            background-color: var(--primary-red);
-            color: var(--white);
-            padding: 10px 20px;
+        /* Brand Logo */
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
             text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: all var(--transition-speed) var(--snappy-curve);
-            animation: pulseGlow 2s infinite;
         }
 
-        .contact-cta:hover {
-            background-color: #a30000;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(204, 0, 0, 0.3);
-            animation: none; /* Stop pulsing on hover */
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--crimson) 0%, #881337 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px var(--crimson-glow);
+            flex-shrink: 0;
+        }
+
+        .logo-icon svg {
+            width: 26px;
+            height: 26px;
+            fill: none;
+            stroke: #ffffff;
+            stroke-width: 2.2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .logo-text-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-title {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 800;
+            letter-spacing: 0.02em;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            line-height: 1.1;
+        }
+
+        .logo-title span {
+            color: var(--crimson);
+        }
+
+        .logo-subtitle {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+        }
+
+        /* Navigation Links */
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-link {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: var(--transition-smooth);
+            position: relative;
+            padding: 6px 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--crimson);
+            transition: var(--transition-smooth);
+            border-radius: 2px;
+        }
+
+        .nav-link:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .phone-quick-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            border-radius: var(--radius-sm);
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-subtle);
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+            transition: var(--transition-smooth);
+        }
+
+        .phone-quick-link:hover {
+            background: rgba(225, 29, 72, 0.12);
+            border-color: rgba(225, 29, 72, 0.4);
+            color: var(--crimson-light);
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: transparent;
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 8px;
+            color: var(--text-primary);
+            cursor: pointer;
         }
 
         /* --- Hero Section --- */
-        .hero {
-            background: linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.85)), url('https://images.unsplash.com/photo-1541888081622-6b933390382d?auto=format&fit=crop&q=80') center/cover no-repeat;
-            background-attachment: fixed; /* Parallax effect */
-            color: var(--white);
-            text-align: center;
-            padding: 100px 20px;
-            height: 80vh;
+        .hero-section {
+            position: relative;
+            padding: 90px 0 100px;
+            min-height: calc(100vh - 80px);
             display: flex;
-            flex-direction: column;
-            justify-content: center;
             align-items: center;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            animation: fadeInUp 0.8s var(--snappy-curve) forwards;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin-bottom: 40px;
-            opacity: 0;
-            animation: fadeInUp 0.8s var(--snappy-curve) 0.2s forwards;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--primary-red);
-            color: var(--white);
-            padding: 15px 30px;
-            text-decoration: none;
-            font-size: 1.1rem;
-            border-radius: 5px;
-            font-weight: bold;
-            opacity: 0;
-            transition: all var(--transition-speed) var(--snappy-curve);
-            animation: fadeInUp 0.8s var(--snappy-curve) 0.4s forwards;
-            position: relative;
             overflow: hidden;
         }
 
-        /* Button shine effect */
-        .btn::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -100%;
-            width: 50%;
-            height: 200%;
-            background: rgba(255,255,255,0.2);
-            transform: rotate(45deg);
-            transition: all 0.5s ease;
-        }
-
-        .btn:hover::after {
-            left: 150%;
-        }
-
-        .btn:hover {
-            background-color: #a30000;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-        }
-
-        /* --- Generic Section Styles --- */
-        .section {
-            padding: 100px 5%;
-            text-align: center;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: var(--dark-gray);
-            position: relative;
-            display: inline-block;
-        }
-        
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 0;
-            height: 4px;
-            background-color: var(--primary-red);
-            margin: 10px auto 40px;
-            transition: width 0.8s var(--snappy-curve);
-        }
-
-        .section.active .section-title::after {
-            width: 80px; /* Expands when scrolled into view */
-        }
-
-        .bg-light {
-            background-color: var(--light-gray);
-        }
-
-        /* --- About Section --- */
-        .about-text {
-            max-width: 800px;
-            margin: 0 auto 50px;
-            font-size: 1.1rem;
-        }
-
-        .values-grid {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
-        .value-card {
-            background-color: var(--white);
-            padding: 40px 30px;
-            border-radius: 8px;
-            width: 300px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--primary-red);
-            transition: all var(--transition-speed) var(--snappy-curve);
-            cursor: default;
-        }
-
-        .value-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-            border-top-width: 8px;
-        }
-
-        .value-card h3 {
-            margin-bottom: 15px;
-            color: var(--dark-gray);
-            transition: color var(--transition-speed);
-        }
-
-        .value-card:hover h3 {
-            color: var(--primary-red);
-        }
-
-        /* --- Services Section --- */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .service-item {
-            background: var(--white);
-            padding: 40px 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: all var(--transition-speed) var(--snappy-curve);
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        /* Hover background slide effect */
-        .service-item::before {
-            content: '';
+        /* Hero Background Layers */
+        .hero-bg {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: var(--primary-red);
-            transform: translateY(100%);
-            transition: transform 0.4s var(--snappy-curve);
-            z-index: -1;
+            background-image: 
+                linear-gradient(180deg, rgba(8, 11, 17, 0.82) 0%, rgba(8, 11, 17, 0.94) 70%, var(--bg-base) 100%),
+                url('https://images.unsplash.com/photo-1541888081622-6b933390382d?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover;
+            background-position: center 30%;
+            z-index: 1;
+            transform: scale(1.03);
+            transition: transform 10s ease-out;
         }
 
-        .service-item:hover::before {
-            transform: translateY(0);
+        .hero-section:hover .hero-bg {
+            transform: scale(1);
         }
 
-        .service-item:hover {
-            transform: translateY(-10px) scale(1.02);
-            color: var(--white);
-            box-shadow: 0 15px 30px rgba(204,0,0,0.2);
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 860px;
+            margin: 0 auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .service-item h3 {
-            color: var(--primary-red);
-            margin-bottom: 15px;
-            font-size: 1.4rem;
-            transition: color var(--transition-speed);
+        .hero-badge-wrap {
+            margin-bottom: 24px;
         }
 
-        .service-item:hover h3 {
-            color: var(--white);
+        .hero-title {
+            font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+            font-weight: 800;
+            line-height: 1.12;
+            margin-bottom: 22px;
+            color: #ffffff;
+            letter-spacing: -0.03em;
+        }
+
+        .hero-title .highlight {
+            background: linear-gradient(135deg, #ffffff 30%, var(--crimson-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.05rem, 2vw, 1.25rem);
+            color: #cbd5e1;
+            max-width: 720px;
+            margin-bottom: 36px;
+            font-weight: 400;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+            width: 100%;
+        }
+
+        /* Hero Trust Stats Grid */
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            width: 100%;
+            max-width: 960px;
+            margin-top: 10px;
+            background: rgba(15, 21, 35, 0.7);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 24px 30px;
+            backdrop-filter: blur(12px);
+            box-shadow: var(--shadow-card);
+        }
+
+        .stat-item {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .stat-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 20%;
+            height: 60%;
+            width: 1px;
+            background: var(--border-subtle);
+        }
+
+        .stat-number {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.1;
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .stat-number span {
+            color: var(--crimson);
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        /* --- Trust Bar Section --- */
+        .trust-bar-section {
+            background: var(--bg-elevated);
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 22px 0;
+        }
+
+        .trust-bar-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .trust-pill {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .trust-pill svg {
+            width: 22px;
+            height: 22px;
+            stroke: var(--crimson);
+            flex-shrink: 0;
+        }
+
+        .trust-pill strong {
+            color: var(--text-primary);
+        }
+
+        /* --- Common Section Headers --- */
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 56px;
+        }
+
+        .section-header .badge {
+            margin-bottom: 14px;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 3.5vw, 2.75rem);
+            margin-bottom: 16px;
+            color: #ffffff;
+        }
+
+        .section-desc {
+            font-size: 1.075rem;
+            color: var(--text-secondary);
+        }
+
+        /* --- Services Section --- */
+        .services-section {
+            padding: 100px 0;
+            background: var(--bg-base);
+            position: relative;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 28px;
+        }
+
+        .service-card {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 36px 30px;
+            transition: var(--transition-smooth);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--crimson), transparent);
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(225, 29, 72, 0.4);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), var(--shadow-glow);
+            background: var(--bg-surface);
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-icon-box {
+            width: 58px;
+            height: 58px;
+            border-radius: var(--radius-md);
+            background: rgba(225, 29, 72, 0.1);
+            border: 1px solid rgba(225, 29, 72, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 22px;
+            transition: var(--transition-smooth);
+        }
+
+        .service-card:hover .service-icon-box {
+            background: var(--crimson);
+            border-color: var(--crimson);
+            box-shadow: 0 0 20px var(--crimson-glow-strong);
+            transform: scale(1.06);
+        }
+
+        .service-icon-box svg {
+            width: 28px;
+            height: 28px;
+            stroke: var(--crimson-light);
+            fill: none;
+            stroke-width: 2;
+            transition: var(--transition-smooth);
+        }
+
+        .service-card:hover .service-icon-box svg {
+            stroke: #ffffff;
+        }
+
+        .service-tag {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--crimson);
+            margin-bottom: 8px;
+        }
+
+        .service-card h3 {
+            font-size: 1.45rem;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+
+        .service-features-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 18px;
+            margin-bottom: 24px;
+        }
+
+        .service-features-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.88rem;
+            color: #cbd5e1;
+        }
+
+        .service-features-list li svg {
+            width: 16px;
+            height: 16px;
+            stroke: var(--emerald);
+            flex-shrink: 0;
+        }
+
+        .service-card-action {
+            margin-top: auto;
+        }
+
+        .btn-card-inquire {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-subtle);
+            padding: 10px 16px;
+            font-size: 0.88rem;
+            color: var(--text-primary);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 600;
+        }
+
+        .btn-card-inquire:hover {
+            background: var(--crimson);
+            border-color: var(--crimson);
+            color: #ffffff;
+        }
+
+        /* --- Interactive Instant Quote Calculator --- */
+        .calculator-section {
+            padding: 90px 0;
+            background: linear-gradient(180deg, var(--bg-base) 0%, var(--bg-elevated) 100%);
+            border-top: 1px solid var(--border-subtle);
+            position: relative;
+        }
+
+        .calc-wrapper {
+            background: var(--bg-surface);
+            border: 1px solid rgba(225, 29, 72, 0.25);
+            border-radius: var(--radius-lg);
+            padding: 44px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .calc-inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .calc-field-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .calc-label {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .calc-options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 10px;
+        }
+
+        .calc-radio-btn {
+            position: relative;
+        }
+
+        .calc-radio-btn input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .calc-radio-btn label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 14px 10px;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            transition: var(--transition-smooth);
+            min-height: 52px;
+        }
+
+        .calc-radio-btn input[type="radio"]:checked + label {
+            background: rgba(225, 29, 72, 0.15);
+            border-color: var(--crimson);
+            color: #ffffff;
+            box-shadow: 0 0 15px rgba(225, 29, 72, 0.2);
+        }
+
+        .calc-summary-card {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 32px 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .calc-summary-badge {
+            align-self: center;
+        }
+
+        .calc-blueprint-title {
+            font-size: 1.35rem;
+            color: #ffffff;
+        }
+
+        .calc-details-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            text-align: left;
+            background: rgba(0, 0, 0, 0.25);
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-subtle);
+        }
+
+        .calc-details-list li {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+        }
+
+        .calc-details-list li span:last-child {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        /* --- Why Choose Us / Pillars --- */
+        .why-us-section {
+            padding: 100px 0;
+            background: var(--bg-base);
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .pillar-card {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 32px 24px;
+            transition: var(--transition-smooth);
+            position: relative;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.2);
+            background: var(--bg-surface);
+            box-shadow: var(--shadow-card);
+        }
+
+        .pillar-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .pillar-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--crimson-light);
+        }
+
+        .pillar-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .pillar-card p {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+        }
+
+        /* --- Industries & Sectors --- */
+        .sectors-section {
+            padding: 80px 0;
+            background: var(--bg-elevated);
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .sectors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .sector-item {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 24px 16px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            transition: var(--transition-smooth);
+        }
+
+        .sector-item:hover {
+            border-color: var(--crimson);
+            transform: translateY(-4px);
+            background: var(--bg-surface-hover);
+        }
+
+        .sector-item svg {
+            width: 32px;
+            height: 32px;
+            stroke: var(--crimson-light);
+        }
+
+        .sector-item span {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+        }
+
+        /* --- Testimonials Section --- */
+        .testimonials-section {
+            padding: 100px 0;
+            background: var(--bg-base);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 28px;
+        }
+
+        .testimonial-card {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: var(--transition-smooth);
+        }
+
+        .testimonial-card:hover {
+            border-color: rgba(225, 29, 72, 0.3);
+            transform: translateY(-4px);
+        }
+
+        .stars-row {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 18px;
+            color: var(--amber);
+        }
+
+        .stars-row svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        .testimonial-quote {
+            font-size: 0.98rem;
+            color: #cbd5e1;
+            font-style: italic;
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        .client-meta {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 18px;
+        }
+
+        .client-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--crimson) 0%, #1e293b 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #ffffff;
+            font-size: 1rem;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .client-info h4 {
+            font-size: 1rem;
+            color: #ffffff;
+            margin-bottom: 2px;
+        }
+
+        .client-info span {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* --- FAQ Accordion Section --- */
+        .faq-section {
+            padding: 90px 0;
+            background: var(--bg-elevated);
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .faq-accordion {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .faq-item {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: var(--transition-smooth);
+        }
+
+        .faq-item.open {
+            border-color: rgba(225, 29, 72, 0.4);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .faq-header {
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .faq-header h3 {
+            font-size: 1.08rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        .faq-icon {
+            width: 22px;
+            height: 22px;
+            stroke: var(--crimson-light);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .faq-item.open .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+            padding: 0 24px;
+        }
+
+        .faq-item.open .faq-body {
+            max-height: 500px;
+            padding: 0 24px 24px;
+            transition: max-height 0.45s ease-in-out;
+        }
+
+        .faq-body p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+
+        /* --- Contact & Inquiry Section --- */
+        .contact-section {
+            padding: 100px 0;
+            background: var(--bg-base);
+            position: relative;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .contact-info-card {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .contact-channel {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .contact-channel-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            background: rgba(225, 29, 72, 0.12);
+            border: 1px solid rgba(225, 29, 72, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-channel-icon svg {
+            width: 22px;
+            height: 22px;
+            stroke: var(--crimson-light);
+        }
+
+        .contact-channel-text h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+
+        .contact-channel-text a, .contact-channel-text p {
+            font-size: 1.05rem;
+            color: #ffffff;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        .contact-channel-text a:hover {
+            color: var(--crimson-light);
+        }
+
+        .gstin-badge-card {
+            background: rgba(16, 185, 129, 0.08);
+            border: 1px dashed rgba(16, 185, 129, 0.3);
+            border-radius: var(--radius-md);
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .gstin-badge-card span {
+            font-size: 0.85rem;
+            color: #a7f3d0;
+        }
+
+        .gstin-badge-card code {
+            font-family: monospace;
+            font-weight: 700;
+            font-size: 1rem;
+            color: #ffffff;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        /* Contact Form */
+        .contact-form-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: var(--shadow-card);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        .form-label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+            padding: 12px 16px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: #ffffff;
+            transition: var(--transition-smooth);
+            outline: none;
+        }
+
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            border-color: var(--crimson);
+            box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.15);
+            background: #151d2e;
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        .form-feedback {
+            display: none;
+            padding: 12px 16px;
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            margin-top: 16px;
+        }
+
+        .form-feedback.success {
+            display: block;
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            color: #34d399;
         }
 
         /* --- Footer --- */
         footer {
-            background-color: var(--dark-gray);
-            color: var(--light-gray);
-            padding: 80px 5% 30px;
+            background: #05070a;
+            border-top: 1px solid var(--border-subtle);
+            padding: 80px 0 30px;
+            color: var(--text-secondary);
         }
 
-        .footer-content {
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.05rem;
+            color: #ffffff;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 28px;
+            height: 2px;
+            background: var(--crimson);
+        }
+
+        .footer-links {
+            list-style: none;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding-bottom: 40px;
-            margin-bottom: 30px;
+            flex-direction: column;
+            gap: 12px;
         }
 
-        .footer-col {
-            flex: 1;
-            min-width: 250px;
-            margin-bottom: 20px;
+        .footer-links a {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
-        .footer-col h3 {
-            color: var(--primary-red);
-            margin-bottom: 20px;
-            font-size: 1.2rem;
-        }
-
-        .footer-col p {
-            margin-bottom: 10px;
-            transition: color 0.2s ease;
-        }
-
-        .footer-col p:hover {
-            color: var(--white);
+        .footer-links a:hover {
+            color: var(--crimson-light);
+            transform: translateX(4px);
         }
 
         .footer-bottom {
-            text-align: center;
-            font-size: 0.9rem;
-            color: #777;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-subtle);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            flex-wrap: wrap;
+            gap: 16px;
         }
 
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            header { flex-direction: column; gap: 15px; padding: 1rem 5%; }
-            header.scrolled { padding: 1rem 5%; }
-            .values-grid { flex-direction: column; align-items: center; }
-            .value-card { width: 100%; max-width: 400px; }
-            .hero { background-attachment: scroll; } /* Disable parallax on mobile for performance */
+        /* Floating Widgets */
+        .floating-actions {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 999;
+        }
+
+        .float-btn {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+            transition: var(--transition-bounce);
+            border: none;
+            outline: none;
+            text-decoration: none;
+        }
+
+        .float-whatsapp {
+            background: #25d366;
+            color: #ffffff;
+        }
+
+        .float-whatsapp:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 28px rgba(37, 211, 102, 0.45);
+        }
+
+        .float-scroll-top {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            color: #ffffff;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition-smooth);
+        }
+
+        .float-scroll-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .float-scroll-top:hover {
+            background: var(--crimson);
+            border-color: var(--crimson);
+            transform: translateY(-3px);
+        }
+
+        /* --- Responsive Breakpoints --- */
+        @media (max-width: 992px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--bg-elevated);
+                border-bottom: 1px solid var(--border-subtle);
+                flex-direction: column;
+                padding: 24px;
+                gap: 18px;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .stat-item:nth-child(2)::after {
+                display: none;
+            }
+
+            .calc-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .nav-container {
+                height: 70px;
+            }
+
+            .phone-quick-link span {
+                display: none;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr 1fr;
+                padding: 18px;
+            }
+
+            .stat-item::after {
+                display: none !important;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+
+            .contact-info-card, .contact-form-card, .calc-wrapper {
+                padding: 24px 20px;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header id="main-header">
-        <div class="logo-container">
-            <div class="logo-text">IMPACT <span class="logo-highlight">SECURITY</span></div>
+    <!-- Header Navigation -->
+    <header class="header-wrap" id="main-header">
+        <div class="container nav-container">
+            <a href="#" class="brand-logo" aria-label="Impact Security Service Home">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        <path d="m9 12 2 2 4-4"/>
+                    </svg>
+                </div>
+                <div class="logo-text-group">
+                    <div class="logo-title">IMPACT <span>SECURITY</span></div>
+                    <div class="logo-subtitle">Guard & Protection Services</div>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#calculator" class="nav-link">Plan Estimator</a></li>
+                <li><a href="#why-us" class="nav-link">Why Choose Us</a></li>
+                <li><a href="#sectors" class="nav-link">Sectors</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <!-- Header Quick Actions -->
+            <div class="nav-actions">
+                <a href="tel:9123991420" class="phone-quick-link" aria-label="Call Direct">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    <span>91239 91420</span>
+                </a>
+                <a href="#contact" class="btn btn-primary btn-sm">Get Quote</a>
+                <button class="mobile-toggle" id="mobile-menu-btn" aria-label="Toggle menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
         </div>
-        <a href="tel:9123991420" class="contact-cta">Call Now: 91239 91420</a>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <h1>Professional Protection You Can Trust</h1>
-        <p>Providing highly trained, reliable in-person security personnel to safeguard your business, property, and events.</p>
-        <a href="#contact" class="btn">Request a Consultation</a>
+    <section class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="container hero-content">
+            <div class="hero-badge-wrap">
+                <span class="badge badge-verified">
+                    <span class="badge-dot"></span>
+                    Govt. Registered Agency &bull; GSTIN: 19DUMPA9757H1ZO
+                </span>
+            </div>
+            
+            <h1 class="hero-title">
+                Uncompromising Protection &amp; <br><span class="highlight">Professional Security Personnel</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                Deploying highly disciplined, police-verified security guards, industrial patrolling units, corporate access controllers, and event crowd protection across Howrah, Kolkata, and West Bengal.
+            </p>
+
+            <div class="hero-cta-group">
+                <a href="#contact" class="btn btn-primary btn-lg">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    Request Free Assessment
+                </a>
+                <a href="https://wa.me/919123991420?text=Hello%20Impact%20Security%20Service%2C%20I%20would%20like%20to%20inquire%20about%20your%20security%20guarding%20services." target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                    </svg>
+                    Instant WhatsApp Chat
+                </a>
+                <a href="#calculator" class="btn btn-outline btn-lg">
+                    Estimate Guard Cost
+                </a>
+            </div>
+
+            <!-- Trust Metrics Grid -->
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">100<span>%</span></div>
+                    <div class="stat-label">Police Verified</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24<span>/7</span></div>
+                    <div class="stat-label">Field Support &amp; Patrol</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">&lt;2<span>hr</span></div>
+                    <div class="stat-label">Backup Replacement</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100<span>%</span></div>
+                    <div class="stat-label">Statutory Compliance</div>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- Trust Certification Bar -->
+    <div class="trust-bar-section">
+        <div class="container trust-bar-inner">
+            <div class="trust-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <path d="m9 12 2 2 4-4"/>
+                </svg>
+                <span><strong>PSARA &amp; Labor Compliant:</strong> Fully Statutory Certified</span>
+            </div>
+            <div class="trust-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span><strong>Night Supervision:</strong> Unannounced Surprise Audits</span>
+            </div>
+            <div class="trust-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                </svg>
+                <span><strong>GSTIN Verified:</strong> 19DUMPA9757H1ZO</span>
+            </div>
+        </div>
+    </div>
+
     <!-- About Section -->
-    <section id="about" class="section bg-light">
-        <h2 class="section-title reveal">Our Commitment</h2>
-        <p class="about-text reveal">At Impact Security Service, we prioritize your safety and peace of mind. We deploy vigilant and professional on-site security guards tailored to meet the specific requirements of our clients.</p>
-        
-        <div class="values-grid">
-            <div class="value-card reveal" style="transition-delay: 0.1s;">
-                <h3>Vigilance</h3>
-                <p>Alert, proactive, and highly trained personnel ready to respond to any situation.</p>
+    <section id="about" class="services-section" style="background: var(--bg-elevated); border-bottom: 1px solid var(--border-subtle);">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Who We Are</span>
+                <h2 class="section-title">A Tradition of Vigilance, Integrity &amp; Discipline</h2>
+                <p class="section-desc">
+                    Impact Security Service is a dedicated private security agency based in Liluah, Howrah. We deliver end-to-end security manpower solutions engineered to deter threats, enforce protocols, and safeguard critical business assets.
+                </p>
             </div>
-            <div class="value-card reveal" style="transition-delay: 0.2s;">
-                <h3>Reliability</h3>
-                <p>Consistent and dependable guarding services you can count on day and night.</p>
-            </div>
-            <div class="value-card reveal" style="transition-delay: 0.3s;">
-                <h3>Integrity</h3>
-                <p>Trusted professionals dedicated to protecting your assets with utmost honesty.</p>
+
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>Rigorous Guard Screening</h3>
+                    <p>Every personnel undergoes exhaustive background checks, biometric verification, local police scrutiny, and fitness standards assessment prior to site deployment.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        </svg>
+                    </div>
+                    <h3>Specialized Tactical Training</h3>
+                    <p>Our guards receive intensive drills covering access control protocols, visitor etiquette, basic firefighting, crisis de-escalation, and first-aid response.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <circle cx="12" cy="11" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>Field Patrol Supervision</h3>
+                    <p>Our mobile area field officers conduct continuous day and night surprise inspections to maintain strict operational alertness, neat turn-out, and log compliance.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="m4.93 4.93 4.24 4.24"/>
+                            <path d="m14.83 9.17 4.24-4.24"/>
+                            <path d="m14.83 14.83 4.24 4.24"/>
+                            <path d="m9.17 14.83-4.24 4.24"/>
+                        </svg>
+                    </div>
+                    <h3>Zero Downtime Replacement</h3>
+                    <p>Guaranteed immediate reserve roster support so your gates, premises, and checkpoints are never unmanned during leaves, sickness, or emergency rotations.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="section">
-        <h2 class="section-title reveal">Our Services</h2>
-        <div class="services-grid">
-            <div class="service-item reveal" style="transition-delay: 0.1s;">
-                <h3>Corporate Security</h3>
-                <p>Front-desk and building security for offices and commercial spaces to ensure a safe working environment.</p>
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Our Capabilities</span>
+                <h2 class="section-title">Comprehensive Security Guarding Solutions</h2>
+                <p class="section-desc">
+                    Tailored security architecture designed for corporate environments, heavy industrial units, logistics hubs, residential societies, and high-profile events.
+                </p>
             </div>
-            <div class="service-item reveal" style="transition-delay: 0.2s;">
-                <h3>Event Security</h3>
-                <p>Crowd control and VIP protection for private or public gatherings, ensuring smooth and safe operations.</p>
-            </div>
-            <div class="service-item reveal" style="transition-delay: 0.3s;">
-                <h3>Residential & Industrial</h3>
-                <p>24/7 on-site presence for complexes, warehouses, and factories to deter unauthorized access.</p>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon-box">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                        </svg>
+                    </div>
+                    <span class="service-tag">Commercial &amp; Offices</span>
+                    <h3>Corporate Security</h3>
+                    <p>Professional front-desk concierge guarding, employee badge verification, visitor logbook maintenance, and high-rise commercial perimeter safety.</p>
+                    <ul class="service-features-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Strict Visitor &amp; Contractor Management
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Asset &amp; Material Movement Screening
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Polite &amp; Uniformed Front-Desk Officers
+                        </li>
+                    </ul>
+                    <div class="service-card-action">
+                        <a href="#contact" class="btn-card-inquire">
+                            <span>Inquire for Office Security</span>
+                            <span>&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon-box">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M3 21h18"/>
+                            <path d="M19 21v-4"/>
+                            <path d="M19 17l-6-6"/>
+                            <path d="M13 11V3l-8 8v10"/>
+                        </svg>
+                    </div>
+                    <span class="service-tag">Plants &amp; Supply Chain</span>
+                    <h3>Industrial &amp; Warehouse Security</h3>
+                    <p>Heavy-duty perimeter control, raw material inward/outward gate pass audits, weighbridge supervision, anti-pilferage, and factory shift security.</p>
+                    <ul class="service-features-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Truck &amp; Consignment Gate Pass Verification
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Perimeter Boundary Patrolling &amp; Torch Rounds
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Theft &amp; Pilferage Prevention Protocols
+                        </li>
+                    </ul>
+                    <div class="service-card-action">
+                        <a href="#contact" class="btn-card-inquire">
+                            <span>Inquire for Factory Security</span>
+                            <span>&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon-box">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <span class="service-tag">Gatherings &amp; Exhibitions</span>
+                    <h3>Event Security &amp; Bouncers</h3>
+                    <p>Trained crowd control specialists, VIP executive protection, access frisking gates, backstage cordons, and emergency evacuation management.</p>
+                    <ul class="service-features-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Male &amp; Female Security Screening Staff
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            VIP Escort &amp; Stage Area Security
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Rapid De-escalation &amp; Crowd Dispersion
+                        </li>
+                    </ul>
+                    <div class="service-card-action">
+                        <a href="#contact" class="btn-card-inquire">
+                            <span>Inquire for Event Security</span>
+                            <span>&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon-box">
+                        <svg viewBox="0 0 24 24">
+                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                    </div>
+                    <span class="service-tag">Societies &amp; High-Rises</span>
+                    <h3>Residential Gated Community</h3>
+                    <p>24/7 entrance gatekeeping, resident vehicle RFID/sticker validation, visitor phone confirmation, delivery personnel screening, and night patrols.</p>
+                    <ul class="service-features-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Society App / Entry Log Integration
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Boom Barrier &amp; Parking Enforcement
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Courteous Family-Friendly Demeanor
+                        </li>
+                    </ul>
+                    <div class="service-card-action">
+                        <a href="#contact" class="btn-card-inquire">
+                            <span>Inquire for Housing Society</span>
+                            <span>&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-icon-box">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="22" y1="12" x2="18" y2="12"/>
+                            <line x1="6" y1="12" x2="2" y2="12"/>
+                            <line x1="12" y1="6" x2="12" y2="2"/>
+                            <line x1="12" y1="22" x2="12" y2="18"/>
+                        </svg>
+                    </div>
+                    <span class="service-tag">High-Value &amp; Transit</span>
+                    <h3>Armed Security &amp; Escorts</h3>
+                    <p>Ex-servicemen and licensed armed guards for banking institutions, jewelry showrooms, cash transit escorting, and executive personal protection.</p>
+                    <ul class="service-features-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Licensed Weapon Handlers &amp; Ex-Servicemen
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Cash-in-Transit &amp; Valuables Protection
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Discreet Executive Close Protection
+                        </li>
+                    </ul>
+                    <div class="service-card-action">
+                        <a href="#contact" class="btn-card-inquire">
+                            <span>Inquire for Armed Guards</span>
+                            <span>&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-icon-box">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                            <circle cx="12" cy="13" r="4"/>
+                        </svg>
+                    </div>
+                    <span class="service-tag">Electronic Integration</span>
+                    <h3>CCTV &amp; Surveillance Monitoring</h3>
+                    <p>Dedicated control room operators trained in real-time CCTV feeds, motion alarm response, perimeter beam trip verification, and emergency dispatch.</p>
+                    <ul class="service-features-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            24/7 Video Wall &amp; DVR Incident Logging
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Immediate Field Guard Intercom Coordination
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Fire Alarm &amp; Intrusion Panel Response
+                        </li>
+                    </ul>
+                    <div class="service-card-action">
+                        <a href="#contact" class="btn-card-inquire">
+                            <span>Inquire for CCTV Ops</span>
+                            <span>&rarr;</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer / Contact Section -->
-    <footer id="contact" class="reveal">
-        <div class="footer-content">
-            <div class="footer-col">
-                <h3>IMPACT SECURITY SERVICE</h3>
-                <p>Professional in-person security solutions.</p>
+    <!-- Interactive Security Requirement Estimator -->
+    <section id="calculator" class="calculator-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-amber">Interactive Tool</span>
+                <h2 class="section-title">Customize Your Security Requirement</h2>
+                <p class="section-desc">
+                    Configure your facility parameters to get an instant customized security blueprint and fast-track quotation.
+                </p>
             </div>
-            <div class="footer-col">
-                <h3>Contact Information</h3>
-                <p><strong>Address:</strong> 77/11 Mirpara Road, Liluah, Howrah</p>
-                <p><strong>Phone:</strong> 91239 91420</p>
-                <p><strong>Email:</strong> impactsecurityservice@gmail.com</p>
-                <p><strong>GSTIN:</strong> 19DUMPA9757H1ZO</p>
+
+            <div class="calc-wrapper">
+                <div class="calc-inputs">
+                    <!-- Facility Type -->
+                    <div class="calc-field-group">
+                        <label class="calc-label">1. Select Facility Type</label>
+                        <div class="calc-options-grid">
+                            <div class="calc-radio-btn">
+                                <input type="radio" id="fac-corp" name="facility" value="Corporate Office" checked>
+                                <label for="fac-corp">🏢 Corporate</label>
+                            </div>
+                            <div class="calc-radio-btn">
+                                <input type="radio" id="fac-ind" name="facility" value="Factory / Warehouse">
+                                <label for="fac-ind">🏭 Industrial</label>
+                            </div>
+                            <div class="calc-radio-btn">
+                                <input type="radio" id="fac-res" name="facility" value="Residential Complex">
+                                <label for="fac-res">🏘️ Residential</label>
+                            </div>
+                            <div class="calc-radio-btn">
+                                <input type="radio" id="fac-event" name="facility" value="Event / Expo">
+                                <label for="fac-event">🎪 Event / VIP</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Guard Count -->
+                    <div class="calc-field-group">
+                        <label class="calc-label">2. Estimated Guard Strength</label>
+                        <div class="calc-options-grid">
+                            <div class="calc-radio-btn">
+                                <input type="radio" id="guards-1" name="guard_count" value="1 - 2 Guards">
+                                <label for="guards-1">1 - 2 Guards</label>
+                            </div>
+                            <div class="calc-radio-btn">
+                                <input type="radio" id="guards-2" name="guard_count" value="3 - 5 Guards" checked>
+                                <label for="guards-2">3 - 5 Guards</label>
+                            </div>
+                            <div class="calc-radio-btn">
+                                <input type="radio" id="guards-3" name="guard_count" value="6 - 10 Guards">
+                                <label for="guards-3">6 - 10 Guards</label>
+                            </div>
+                            <div class="calc-radio-btn">
+                                <input type="radio" id="guards-4" name="guard_count" value="10+ Guards">
+                                <label for="guards-4">10+ Team</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shift Coverage -->
+                    <div class="calc-field-group">
+                        <label class="calc-label">3. Shift Deployment Schedule</label>
+                        <div class="calc-options-grid">
+                            <div class="calc-radio-btn">
+                                <input type="radio" id="shift-12d" name="shift_type" value="12-Hour Day Shift">
+                                <label for="shift-12d">12h Day Shift</label>
+                            </div>
+                            <div class="calc-radio-btn">
+                                <input type="radio" id="shift-24" name="shift_type" value="24/7 (Day & Night Continuous)" checked>
+                                <label for="shift-24">24/7 Day &amp; Night</label>
+                            </div>
+                            <div class="calc-radio-btn">
+                                <input type="radio" id="shift-evt" name="shift_type" value="Short-term / Event Basis">
+                                <label for="shift-evt">Short-Term Event</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Summary Result -->
+                <div class="calc-summary-card">
+                    <span class="badge badge-verified calc-summary-badge">Custom Deployment Plan</span>
+                    <h3 class="calc-blueprint-title" id="summary-facility-title">Corporate Office Security</h3>
+                    
+                    <ul class="calc-details-list">
+                        <li>
+                            <span>Selected Sector:</span>
+                            <span id="sum-fac">Corporate Office</span>
+                        </li>
+                        <li>
+                            <span>Guard Strength:</span>
+                            <span id="sum-guards">3 - 5 Guards</span>
+                        </li>
+                        <li>
+                            <span>Deployment Coverage:</span>
+                            <span id="sum-shift">24/7 (Day &amp; Night)</span>
+                        </li>
+                        <li>
+                            <span>Field Patrol Audits:</span>
+                            <span>Included (Free)</span>
+                        </li>
+                        <li>
+                            <span>Statutory Compliance:</span>
+                            <span>100% Guaranteed</span>
+                        </li>
+                    </ul>
+
+                    <button class="btn btn-primary" id="btn-request-plan" style="width: 100%;">
+                        <span>Send This Requirement</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </button>
+                    <p style="font-size: 0.8rem; color: var(--text-muted);">
+                        Instant quote &amp; site feasibility review within 60 minutes.
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            &copy; 2026 Impact Security Service. All rights reserved.
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="why-us-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">The Impact Advantage</span>
+                <h2 class="section-title">Why Industry Leaders Trust Impact Security</h2>
+                <p class="section-desc">
+                    We combine rigorous disciplinary standards, localized intelligence, and prompt supervisory response to ensure flawless on-ground safety.
+                </p>
+            </div>
+
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3>100% Legal &amp; Statutory Payouts</h3>
+                    <p>Complete compliance with Minimum Wages Act, PF, ESIC, Bonus, and GSTIN regulations (19DUMPA9757H1ZO), shielding your company from legal liabilities.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 14 14"/>
+                        </svg>
+                    </div>
+                    <h3>24/7 Surprise Night Supervision</h3>
+                    <p>Dedicated patrolling officers on mobile vans visit your post at unannounced midnight hours to inspect alertness, gate books, and perimeter safety.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <h3>Strict Uniform &amp; Turnout</h3>
+                    <p>Our guards are equipped with crisp company uniforms, polished badges, lanyards, whistles, heavy torches, and baton equipment for maximum authority.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                    </div>
+                    <h3>Direct Command Hotline</h3>
+                    <p>Direct access to our senior operations management (+91 91239 91420) ensures immediate issue escalation without frustrating call-center delays.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sectors & Coverage -->
+    <section id="sectors" class="sectors-section">
+        <div class="container">
+            <div class="section-header" style="margin-bottom: 36px;">
+                <span class="badge">Sectors We Safeguard</span>
+                <h2 class="section-title">Proven Protection Across Diverse Industries</h2>
+            </div>
+
+            <div class="sectors-grid">
+                <div class="sector-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                        <line x1="8" y1="21" x2="16" y2="21"/>
+                        <line x1="12" y1="17" x2="12" y2="21"/>
+                    </svg>
+                    <span>IT &amp; Tech Parks</span>
+                </div>
+                <div class="sector-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                        <path d="M3 21h18"/>
+                        <path d="M19 21v-4"/>
+                        <path d="M19 17l-6-6"/>
+                        <path d="M13 11V3l-8 8v10"/>
+                    </svg>
+                    <span>Manufacturing &amp; Mills</span>
+                </div>
+                <div class="sector-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                    </svg>
+                    <span>Logistics &amp; Godowns</span>
+                </div>
+                <div class="sector-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    </svg>
+                    <span>Gated Townships</span>
+                </div>
+                <div class="sector-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"/>
+                        <circle cx="20" cy="21" r="1"/>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                    </svg>
+                    <span>Malls &amp; Retail Showrooms</span>
+                </div>
+                <div class="sector-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                        <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                    </svg>
+                    <span>Schools &amp; Institutes</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Client Endorsements</span>
+                <h2 class="section-title">What Our Clients Say About Our Guarding</h2>
+                <p class="section-desc">Reliability and punctuality define our long-standing relationships with facility managers and business owners.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div>
+                        <div class="stars-row">
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <p class="testimonial-quote">
+                            "Impact Security Service has been managing our factory warehouse entrance in Howrah for over two years. Their material inward/outward gate register keeping is meticulous, and midnight supervisory rounds are consistent."
+                        </p>
+                    </div>
+                    <div class="client-meta">
+                        <div class="client-avatar">RK</div>
+                        <div class="client-info">
+                            <h4>Rajesh K.</h4>
+                            <span>Plant Logistics Head, Howrah Industrial Area</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div>
+                        <div class="stars-row">
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <p class="testimonial-quote">
+                            "The security guards provided for our housing complex are polite, well-turned-out, and alert. Delivery tracking and visitor entry management have drastically improved since Impact took charge."
+                        </p>
+                    </div>
+                    <div class="client-meta">
+                        <div class="client-avatar">SG</div>
+                        <div class="client-info">
+                            <h4>Sourav G.</h4>
+                            <span>RWA Secretary, Liluah Residential Estate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div>
+                        <div class="stars-row">
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <p class="testimonial-quote">
+                            "We hired bouncers and crowd management guards for a 3-day public event in Kolkata. Their team demonstrated high discipline, managed VIP movement seamlessly, and maintained safety without any friction."
+                        </p>
+                    </div>
+                    <div class="client-meta">
+                        <div class="client-avatar">AM</div>
+                        <div class="client-info">
+                            <h4>Amit M.</h4>
+                            <span>Event Operations Director, Kolkata</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Got Questions?</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-desc">Common questions regarding guard deployment, compliance, training, and supervision.</p>
+            </div>
+
+            <div class="faq-accordion">
+                <div class="faq-item open">
+                    <div class="faq-header">
+                        <h3>How quickly can you deploy security guards at our site?</h3>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-body">
+                        <p>We can deploy an initial security squad within 24 to 48 hours following a site security survey and signed agreement. For short-term events or emergency bouncer requirements, rapid same-day deployment is also available.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3>Are your security guards police verified and background checked?</h3>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-body">
+                        <p>Yes, 100%. Every guard undergoes identity verification, residential address validation, reference checks, and local police verification records before being posted to any commercial or residential facility.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3>What happens if a security guard is absent or falls ill?</h3>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-body">
+                        <p>We maintain a dedicated 15% reserve roster of trained personnel. Our field supervisor immediately dispatches a replacement guard within 2 hours to ensure your post is never left vacant.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3>Do you manage full statutory compliance (PF, ESIC, GST)?</h3>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-body">
+                        <p>Yes. Impact Security Service is fully GST registered (GSTIN: 19DUMPA9757H1ZO) and compliant with all statutory labor laws including Provident Fund (PF), ESIC medical coverage, and Minimum Wages regulations.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3>Which geographic areas do you cover?</h3>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-body">
+                        <p>Our primary operational footprint spans Howrah (Liluah, Belur, Bally, Kona Expressway, Dhulagarh, Sankrail) and Greater Kolkata (Salt Lake, New Town, Park Street, Alipore, Behala, BT Road) and adjoining industrial belts across West Bengal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Quotation Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-amber">Connect With Us</span>
+                <h2 class="section-title">Request a Security Consultation &amp; Quote</h2>
+                <p class="section-desc">Speak directly with our operations team or submit your property requirements for a fast assessment.</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Details -->
+                <div class="contact-info-card">
+                    <div>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 8px; color: #ffffff;">Impact Security Service</h3>
+                        <p style="font-size: 0.95rem; color: var(--text-secondary);">Your dependable partner for complete on-ground physical protection and corporate guarding.</p>
+                    </div>
+
+                    <div class="contact-channel">
+                        <div class="contact-channel-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div class="contact-channel-text">
+                            <h4>Head Office Address</h4>
+                            <p>77/11 Mirpara Road, Liluah, Howrah - 711204, West Bengal, India</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-channel">
+                        <div class="contact-channel-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-channel-text">
+                            <h4>Direct Phone &amp; Emergency</h4>
+                            <a href="tel:9123991420">+91 91239 91420</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-channel">
+                        <div class="contact-channel-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div class="contact-channel-text">
+                            <h4>Email Inquiries</h4>
+                            <a href="mailto:impactsecurityservice@gmail.com">impactsecurityservice@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="gstin-badge-card">
+                        <span>GST Registered Entity</span>
+                        <code>19DUMPA9757H1ZO</code>
+                    </div>
+                </div>
+
+                <!-- Contact / Quote Form -->
+                <div class="contact-form-card">
+                    <h3 style="font-size: 1.4rem; margin-bottom: 20px; color: #ffffff;">Send Requirement Details</h3>
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label" for="client-name">Full Name *</label>
+                                <input type="text" id="client-name" class="form-input" placeholder="e.g. Rahul Sharma" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="client-phone">Phone Number *</label>
+                                <input type="tel" id="client-phone" class="form-input" placeholder="e.g. 98300 XXXXX" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="client-email">Email Address</label>
+                                <input type="email" id="client-email" class="form-input" placeholder="e.g. rahul@company.com">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="client-service">Service Category *</label>
+                                <select id="client-service" class="form-select" required>
+                                    <option value="Corporate Office Security">Corporate Office Security</option>
+                                    <option value="Industrial & Warehouse Guarding">Industrial &amp; Warehouse Guarding</option>
+                                    <option value="Residential Society Security">Residential Society Security</option>
+                                    <option value="Event Security & Bouncers">Event Security &amp; Bouncers</option>
+                                    <option value="Armed Guards & Escorts">Armed Guards &amp; Escorts</option>
+                                    <option value="CCTV & Surveillance Ops">CCTV &amp; Surveillance Ops</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label class="form-label" for="client-location">Location / Facility Address *</label>
+                                <input type="text" id="client-location" class="form-input" placeholder="e.g. Liluah / Salt Lake / Howrah" required>
+                            </div>
+                            <div class="form-group full-width">
+                                <label class="form-label" for="client-message">Specific Requirements / Number of Guards</label>
+                                <textarea id="client-message" class="form-textarea" placeholder="Tell us about the number of guards needed, shift timings (12h or 24h), and start date..."></textarea>
+                            </div>
+                            <div class="form-group full-width">
+                                <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                                    <span>Submit Request for Free Quote</span>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="form-feedback-box" class="form-feedback"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <div class="brand-logo" style="margin-bottom: 16px;">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="m9 12 2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <div class="logo-text-group">
+                            <div class="logo-title">IMPACT <span>SECURITY</span></div>
+                            <div class="logo-subtitle">Guard &amp; Protection</div>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 18px;">
+                        Impact Security Service is a licensed, professional security agency providing trained personnel, 24/7 on-site physical protection, and supervisory field control.
+                    </p>
+                    <p style="font-size: 0.85rem; color: #a7f3d0;">
+                        <strong>GSTIN:</strong> 19DUMPA9757H1ZO
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">&rsaquo; About Our Agency</a></li>
+                        <li><a href="#services">&rsaquo; Guarding Services</a></li>
+                        <li><a href="#calculator">&rsaquo; Plan Estimator</a></li>
+                        <li><a href="#why-us">&rsaquo; Why Choose Us</a></li>
+                        <li><a href="#faq">&rsaquo; FAQ</a></li>
+                        <li><a href="#contact">&rsaquo; Request Quotation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Core Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">&rsaquo; Corporate Guarding</a></li>
+                        <li><a href="#services">&rsaquo; Industrial Protection</a></li>
+                        <li><a href="#services">&rsaquo; Warehouse Security</a></li>
+                        <li><a href="#services">&rsaquo; Event Crowd Control</a></li>
+                        <li><a href="#services">&rsaquo; Residential Housing</a></li>
+                        <li><a href="#services">&rsaquo; Armed Protection</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Office</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 10px;">
+                        <strong>Address:</strong><br>
+                        77/11 Mirpara Road, Liluah, Howrah, West Bengal - 711204
+                    </p>
+                    <p style="font-size: 0.9rem; margin-bottom: 10px;">
+                        <strong>Phone:</strong> <a href="tel:9123991420" style="color: #ffffff;">+91 91239 91420</a>
+                    </p>
+                    <p style="font-size: 0.9rem;">
+                        <strong>Email:</strong> <a href="mailto:impactsecurityservice@gmail.com" style="color: #ffffff;">impactsecurityservice@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    &copy; 2026 <strong>Impact Security Service</strong>. All rights reserved.
+                </div>
+                <div>
+                    Registered Security Agency &bull; Liluah, Howrah, West Bengal
+                </div>
+            </div>
         </div>
     </footer>
 
-    <!-- Intersection Observer Script for Scroll Animations -->
+    <!-- Floating Quick Actions -->
+    <div class="floating-actions">
+        <a href="https://wa.me/919123991420?text=Hello%20Impact%20Security%20Service%2C%20I%20am%20interested%20in%20security%20guard%20services." target="_blank" rel="noopener" class="float-btn float-whatsapp" aria-label="Chat on WhatsApp">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+            </svg>
+        </a>
+        <button class="float-btn float-scroll-top" id="scroll-top-btn" aria-label="Scroll to top">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Interactive Scripts -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // Header shrink on scroll
+            // Header Scroll Glass Effect
             const header = document.getElementById("main-header");
+            const scrollTopBtn = document.getElementById("scroll-top-btn");
+
             window.addEventListener("scroll", () => {
-                if (window.scrollY > 50) {
+                const scrollY = window.scrollY;
+                if (scrollY > 50) {
                     header.classList.add("scrolled");
                 } else {
                     header.classList.remove("scrolled");
                 }
+
+                if (scrollY > 400) {
+                    scrollTopBtn.classList.add("visible");
+                } else {
+                    scrollTopBtn.classList.remove("visible");
+                }
             });
 
-            // Reveal elements on scroll
-            const reveals = document.querySelectorAll(".reveal, .section");
-            
-            const revealObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("active");
-                        // Optional: Stop observing once revealed if you only want it to happen once
-                        // observer.unobserve(entry.target); 
+            // Scroll to top button
+            scrollTopBtn.addEventListener("click", () => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+
+            // Mobile Menu Toggle
+            const mobileBtn = document.getElementById("mobile-menu-btn");
+            const navLinks = document.getElementById("nav-links");
+
+            if (mobileBtn && navLinks) {
+                mobileBtn.addEventListener("click", () => {
+                    navLinks.classList.toggle("open");
+                });
+
+                navLinks.querySelectorAll("a").forEach(link => {
+                    link.addEventListener("click", () => {
+                        navLinks.classList.remove("open");
+                    });
+                });
+            }
+
+            // FAQ Accordion
+            const faqItems = document.querySelectorAll(".faq-item");
+            faqItems.forEach(item => {
+                const header = item.querySelector(".faq-header");
+                header.addEventListener("click", () => {
+                    const isOpen = item.classList.contains("open");
+                    faqItems.forEach(i => i.classList.remove("open"));
+                    if (!isOpen) {
+                        item.classList.add("open");
                     }
                 });
-            }, {
-                root: null,
-                threshold: 0.15, // Trigger when 15% of element is visible
-                rootMargin: "0px 0px -50px 0px"
             });
 
-            reveals.forEach(reveal => {
-                revealObserver.observe(reveal);
+            // Interactive Security Requirement Estimator
+            const facilityInputs = document.querySelectorAll('input[name="facility"]');
+            const guardInputs = document.querySelectorAll('input[name="guard_count"]');
+            const shiftInputs = document.querySelectorAll('input[name="shift_type"]');
+
+            const sumFac = document.getElementById("sum-fac");
+            const sumGuards = document.getElementById("sum-guards");
+            const sumShift = document.getElementById("sum-shift");
+            const sumTitle = document.getElementById("summary-facility-title");
+            const btnRequestPlan = document.getElementById("btn-request-plan");
+
+            function updateCalculator() {
+                const selectedFac = document.querySelector('input[name="facility"]:checked')?.value || "Corporate Office";
+                const selectedGuards = document.querySelector('input[name="guard_count"]:checked')?.value || "3 - 5 Guards";
+                const selectedShift = document.querySelector('input[name="shift_type"]:checked')?.value || "24/7";
+
+                if (sumFac) sumFac.textContent = selectedFac;
+                if (sumGuards) sumGuards.textContent = selectedGuards;
+                if (sumShift) sumShift.textContent = selectedShift;
+                if (sumTitle) sumTitle.textContent = selectedFac + " Security Plan";
+            }
+
+            [...facilityInputs, ...guardInputs, ...shiftInputs].forEach(radio => {
+                radio.addEventListener("change", updateCalculator);
             });
+
+            if (btnRequestPlan) {
+                btnRequestPlan.addEventListener("click", () => {
+                    const selectedFac = document.querySelector('input[name="facility"]:checked')?.value || "Corporate Office";
+                    const selectedGuards = document.querySelector('input[name="guard_count"]:checked')?.value || "3 - 5 Guards";
+                    const selectedShift = document.querySelector('input[name="shift_type"]:checked')?.value || "24/7";
+
+                    // Pre-fill contact form
+                    const serviceSelect = document.getElementById("client-service");
+                    if (serviceSelect) {
+                        for (let option of serviceSelect.options) {
+                            if (option.value.toLowerCase().includes(selectedFac.toLowerCase().split(" ")[0])) {
+                                serviceSelect.value = option.value;
+                                break;
+                            }
+                        }
+                    }
+
+                    const messageBox = document.getElementById("client-message");
+                    if (messageBox) {
+                        messageBox.value = `Requirement Details: ${selectedFac} | Strength: ${selectedGuards} | Shift: ${selectedShift}. Please share quote and availability.`;
+                    }
+
+                    // Smooth scroll to contact
+                    const contactSection = document.getElementById("contact");
+                    if (contactSection) {
+                        contactSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                });
+            }
         });
+
+        // Contact Form Submission Handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById("client-name").value.trim();
+            const phone = document.getElementById("client-phone").value.trim();
+            const email = document.getElementById("client-email").value.trim();
+            const service = document.getElementById("client-service").value;
+            const location = document.getElementById("client-location").value.trim();
+            const message = document.getElementById("client-message").value.trim();
+
+            const feedback = document.getElementById("form-feedback-box");
+
+            // Format message for WhatsApp
+            const waText = encodeURIComponent(
+                `*New Security Inquiry - Impact Security Service*\n` +
+                `*Name:* ${name}\n` +
+                `*Phone:* ${phone}\n` +
+                `*Email:* ${email || 'N/A'}\n` +
+                `*Service:* ${service}\n` +
+                `*Location:* ${location}\n` +
+                `*Details:* ${message || 'Standard assessment requested'}`
+            );
+
+            feedback.className = "form-feedback success";
+            feedback.innerHTML = `<strong>Thank you, ${name}!</strong> Your request is ready. Opening WhatsApp to connect directly with our dispatch manager...`;
+
+            // Open WhatsApp in new tab after slight delay
+            setTimeout(() => {
+                window.open(`https://wa.me/919123991420?text=${waText}`, "_blank");
+            }, 800);
+        }
     </script>
 </body>
 </html>
